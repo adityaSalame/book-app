@@ -1,7 +1,7 @@
 import React,{useState} from 'react';
 
 const Card=({data})=>{
-    const [info, setInfo]= useState(["","","","","","","","",""]);
+    const [info, setInfo]= useState(["","","","","","","","","","",""]);
     const [showdetails,setshowdetails]= useState(false);
     const [topthree,setTopthree] = useState(true);
     const more=data.slice(0,3);
@@ -23,8 +23,8 @@ const Card=({data})=>{
        // console.log("this is"+info.volumeInfo.imageLinks.thumbnail);
         // console.log(info.authors[0],info.title,info.description,info.language);
         setInfo([book.title,book.description,book.language,book.averageRating,book.ratingsCount,
-            book.publishedDate,book.publisher,book.imageLinks.thumbnail,book.authoors]);
-        console.log(info[0], info.length);
+            book.publishedDate,book.publisher,book.imageLinks.thumbnail,book.authors,book.previewLink,book.infoLink]);
+        //console.log(info[0], info.length);
         // title=info.title;
         // desc=info.description;
         // lang=info.language;
@@ -44,23 +44,23 @@ const Card=({data})=>{
                 <div className='details-con'>
                     <div className='title-pub-con'>
                         <div className='title-con'><h1>{info[0]}</h1></div>
-                        <div className='pub-con'>{info[5]}</div>
+                        <div className='pub-con'>Published On: {info[5]}</div>
                     </div>
                     <div className='auth-con'>{info[8]}</div>
                     <div className='desc-con'>{info[1]}</div>
                     <div className='other-con'>
-                        <div>{info[3]}</div>
+                        <div>Avg Rating: {info[3]}</div>
                         <div>|</div>
-                        <div>{info[4]}</div>
+                        <div>Rating Count: {info[4]}</div>
                         <div>|</div>
-                        <div>{info[6]}</div>
+                        <div>Publisher: {info[6]}</div>
                         <div>|</div>
-                        <div>{info[2]}</div>
+                        <div>Language: s{info[2]}</div>
                         
                     </div>
                     <div className='buttons' >
-                        <button className='read'>Now Read</button>
-                        <button className='read'>More Info</button>
+                    <a href={info[9]} ><button className='read'>Now Read</button></a>
+                    <a href={info[10]}><button className='read'>More Info</button></a>
                     </div>
                 </div>
             </div>
@@ -81,7 +81,7 @@ const Card=({data})=>{
                                 <div>{book.volumeInfo.description}</div>
                             </div>
                             <div>
-                                <button className='read'>Now Read!</button>
+                                <a href={book.volumeInfo.previewLink}><button className='read'>Now Read!</button></a>
                             </div>
                         </div>
                     </div>

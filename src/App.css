@@ -83,9 +83,9 @@ button{
  grid-template-columns: auto auto auto auto auto auto;
 }
 
-.descriprtion{
+.description{
   background-color: lightcoral;
-  text-align: center;
+  
   
   padding:5px;
 }
@@ -107,16 +107,31 @@ button{
   color:white;
 }
 
-title-pub-con{
+.title-pub-con{
   display: flex;
   justify-content: space-between;
   padding:2vh;
+  width: 100%;
 }
 
-.pub-con, .auth-con, desc-con{
+.pub-con, .auth-con, .desc-con{
  
   color:rgb(219, 209, 209);
  
+}
+
+button{
+  cursor: pointer;
+}
+
+.auth-con{
+  font-size: large;
+  padding-bottom: 1vh;
+}
+
+.details-con{
+  padding:2vh;
+  width: 100%;
 }
 
 .other-con{
