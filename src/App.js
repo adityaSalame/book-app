@@ -1,25 +1,23 @@
-import logo from './logo.svg';
+import React, {useState} from 'react';
 import './App.css';
+import Home from './components/Home';
+import Card from './components/Card';
+import Morebooks from './components/Morebooks';
+import axios from 'axios';
+
 
 function App() {
+  const [data, setData] = useState([]);
+  
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+   <div>
+    <Home setData={setData}/>
+    <Card data={data}/>
+    <h2>More Books</h2>
+    <Morebooks data={data}/>
+   </div>
   );
 }
+
 
 export default App;
