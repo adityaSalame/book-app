@@ -57,7 +57,11 @@ const Card=({data})=>{
                         <div>|</div>
                         <div>{info[2]}</div>
                         
-                    </div> 
+                    </div>
+                    <div className='buttons' >
+                        <button className='read'>Now Read</button>
+                        <button className='read'>More Info</button>
+                    </div>
                 </div>
             </div>
             

@@ -1,11 +1,4 @@
-.logos, .searchbar{
-  display:flex;
-  justify-content: center;
-}
 
-.logo{
-  height:30px;
-}
 
 *{
   
@@ -24,7 +17,21 @@ input{
   color:white;
   width:200px;
   height:34px;
+  padding:2px;
+  padding-left: 5px;
+}
 
+.logos, .searchbar{
+  display:flex;
+  justify-content: center;
+}
+
+.search-btn button{
+  color:black;
+}
+
+.logo{
+  height:30px;
 }
 
 input::placeholder{
@@ -107,7 +114,9 @@ title-pub-con{
 }
 
 .pub-con, .auth-con, desc-con{
+ 
   color:rgb(219, 209, 209);
+ 
 }
 
 .other-con{
@@ -118,4 +127,19 @@ title-pub-con{
   font-weight: bolder;
   padding:2vh;
   
+}
+
+.buttons{
+  display:flex;
+  justify-content: end;
+  padding:1vh;
+}
+
+.buttons button{
+  width:15vh;
+  color:rgb(219, 209, 209);
+  border: 1px solid rgb(219, 209, 209);
+  border-radius:5px;
+  padding:1vh;
+  margin:2vh;
 }

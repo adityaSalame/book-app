@@ -79,7 +79,7 @@ const Home=({setData})=>{
                     value ={searchTerm} onChange={(e)=> setSearchTerm(e.target.value)}
                     />
                     </div>
-                    <div>
+                    <div className='search-btn'>
                     <button onClick={searchBook}>Search</button>
                     </div>
                 </div>
